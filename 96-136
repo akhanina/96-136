@@ -1,0 +1,752 @@
+96
+// let regex = /a.b/g;
+// let str = 'ahb acb aeb aeeb adcb axeb';
+// let result = str.replace(regex, '');
+// console.log(result);
+
+
+// let regex = /a..a/g;
+// let str = 'aba aca aea abba adca abea';
+// let result = str.replace(regex, '');
+// console.log(result);
+
+
+// let regex = /(abba|abea)/g;
+// let str = 'aba aca aea abba adca abea';
+// let result = str.replace(regex, '');
+// console.log(result); 
+
+
+
+// 97
+// let str = 'aa aba abba abbba abca abea';
+// let regex = /a+ba/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = 'aa aba abba abbba abca abea';
+// let regex = /a * ba/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = 'aa aba abba abbba abca abea';
+// let regex = /a?ba/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = 'aa aba abba abbba abca abea';
+// let regex = /(?!abca|abea)a+ba/g;
+// let result = str.replace(regex, '!');
+// console.log(result);
+
+
+
+// 98
+// let str = 'ab abab abab abababab abea';
+// let regex = /(ab)+/g;
+// let result = str.replace(regex, '!');
+// console.log(result);
+
+
+
+// 99
+// let str = 'a.a aba aea';
+// let regex = /a\.a/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = '2+3 223 2223';
+// let regex = /2\+3/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = '23 2+3 2++3 2+++3 345 567';
+// let regex = /2\+?\+\+?3/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = '23 2+3 2++3 2+++3 445 677';
+// let regex = /23|2\+3|2\+\+3|2\+\+\+3/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = ' * +  * q+  * qq+  * qqq+  * qqq qqq+';
+// let regex = /q\+/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = '[abc] {abc} abc (abc) [abc]';
+// let regex = /\[. * ?\]/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+
+// 100
+// let regex = /abba|abbba|abbbba/g;
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// let result = str.replace(regex, '!');
+// console.log(result);
+
+
+// let regex = /aba/g;
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// let result = str.replace(regex, '!');
+// console.log(result);
+
+
+// let regex = /aba/g;
+// let str = 'aa aba abba abbba abbbba abbbbba';
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+
+// 101
+// let str = 'aba accca azzza wwwwa';
+// let res = str.replace(/a.+?a/g, '!');
+// console.log(res); 
+
+
+
+// 102
+// let str = 'a1a a2a a3a a4a a5a aba aca';
+// let regex = /a(\d)a/g;
+// let result = str.replace(regex, '!');
+// console.log(result);
+
+
+// let str = 'a1a a22a a333a a4444a a55555a aba aca';
+// let regex = /a+\d+a+/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = 'aa a1a a22a a333a a4444a a55555a aba aca';
+// let regex = /a+(\d+)?a+/g;
+// let result = str.replace(regex, '!');
+// console.log(result); 
+
+
+// let str = 'avb a1b a2b a3b a4b a5b abb acb';
+// let res = str.replace(/a[^0-9\s]b/g, '!');
+// console.log(res); 
+
+
+// let str = 'ave a#b a2b a$b a4b a5b a-b acb';
+// let res = str.replace(/a[^\w\s]b/g, '!');
+// console.log(res);
+
+
+// let str = 'ave a#a a2a a$a a4a a5a a-a aca';
+// let res = str.replace(/\s/g, '!');
+// console.log(res); 
+
+
+
+// 103
+// let regex1 = /^a. * [bxe]. * a$/;
+// let matches1 = str.match(regex1);
+// console.log(matches1);
+
+
+// let regex2 = /^a[3-6]a$/;
+// let matches2 = str.match(regex2);
+// console.log(matches2); 
+
+
+// let regex3 = /^a[a-g]a$/;
+// let matches3 = str.match(regex3);
+// console.log(matches3); 
+
+
+// let regex4 = /^a[a-fj-z]a$/;
+// let matches4 = str.match(regex4);
+// console.log(matches4); 
+
+
+// let regex5 = /^a[a-fA-D]a$/;
+// let matches5 = str.match(regex5);
+// console.log(matches5); 
+
+
+// let regex6 = /^a[a-f]a$/;
+// let matches6 = str.match(regex6);
+// console.log(matches6);
+
+
+// let regex7 = /^a[a-zA-Z]a$/;
+// let matches7 = str.match(regex7);
+// console.log(matches7); 
+
+
+// let regex8 = /^a[a-f0-9]a$/;
+// let matches8 = str.match(regex8);
+// console.log(matches8); 
+
+
+
+// 104
+// let str = 'a1b2 c1d2 e1f2 x1y2';
+// let res = str.match(/1[^ex]2/g);
+// console.log(res); 
+
+
+// let str = 'xz1z xz3z xz7z xz9z xzaz';
+// let res = str.match(/x[^2-7]z/g);
+// console.log(res);
+
+
+// let str = 'xz xaz xbz xcz xdzz';
+// let res = str.match(/x[^a-z]+z/g);
+// console.log(res); 
+
+
+// let str = 'xz x1z xAz x5z x8z';
+// let res = str.match(/x[^a-zA-Z0-5]+z/g);
+// console.log(res); 
+
+
+// 105
+// let str = 'wйw wяw wёw wqw';
+// let res = str.match(/w[а-яё]w/g);
+// console.log(res); 
+
+
+// let str = 'ааа ббб ёёё ззз ййй ААА БББ ЁЁЁ ЗЗЗ ЙЙЙ';
+// let res = str.match(/[а-яё]+/gi);
+// console.log(res); 
+
+
+
+// 106
+// let str = 'aba aea aca aza axa a.a a+a a*a';
+// let res = str.match(/a[.+*]a/g);
+// console.log(res); 
+
+
+// let str = 'xaz x.z x3z x@z x$z xrz';
+// let res = str.match(/x[^.@$]z/g);
+// console.log(res); 
+
+
+
+// 107
+// let str = '123.45 6.7 89. 0';
+// let res = str.match(/[0-9.]+/g);
+// console.log(res); 
+
+
+// let str = 'abc def gh ijk abcd efghi abcde abcdefg';
+// let res = str.match(/[^a-g0-9]{3,7}/g);
+// console.log(res);
+
+
+// 108
+// let str = 'x[]z x[[]]z x()z';
+// let res = str.match(/x\[[\[\]]*\]z/g);
+// console.log(res); 
+
+
+// let str = 'x[]z x{}z x.z x()z x([])z';
+// let res = str.match(/x[^\s]*z/g);
+// console.log(res); 
+
+
+
+// 109
+// let str = '^xx axx ^zz bkk @ss';
+// let res = str.match(/[^\s@^][a-zA-Z]{2}/g);
+// console.log(res); 
+
+
+// let str = '^xx axx ^zz bkk @ss';
+// let res = str.match(/[^@^][a-zA-Z]{2}/g);
+// console.log(res);
+
+
+// let str = '^xx axx ^zz bkk';
+// let res = str.match(/[^@\s][a-zA-Z]{2}/g);
+// console.log(res);
+
+
+
+// 110
+// let str = 'xaz xBz xcz x-z x@z';
+// let res = str.match(/x[a-zA-Z-]z/g);
+// console.log(res); 
+
+
+// let str = 'xaz x$z x-z xcz x+z x%z x*z';
+// let res = str.match(/x[$+-]z/g);
+// console.log(res); 
+
+
+// 111
+// let str = 'aaa AAA bbb BBB';
+// let res = str.replace(/[a-z]/ig, '!');
+// console.log(res); 
+
+
+
+// 112
+// let str = 'abc def xyz';
+// let regex = /[a-z]+/i;
+// let match = str.match(regex);
+// console.log(match[0]);
+
+
+// let str = 'abc def xyz';
+// let regex = /[a-z]+/ig;
+// let match = str.match(regex);
+// console.log(match.pop());
+
+
+
+// 113
+// let str = 'abc def xyz';
+// let regex = /[a-z]+/ig;
+// let replacedStr = str.replace(regex, '#$&#');
+// console.log(replacedStr); 
+
+
+// let str = 'abc def xyz';
+// let regex = /([a-z])/ig;
+// let replacedStr = str.replace(regex, '$1+');
+// console.log(replacedStr);
+
+
+
+// 114
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+\s*$)/gim;
+// let replacedStr = str.replace(regex, '$1!');
+// console.log(replacedStr);
+
+
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+)/gim;
+// let replacedStr = str.replace(regex, '!$1');
+// console.log(replacedStr);
+
+
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+\s*$)/gim;
+// let replacedStr = str.replace(regex, '!$&\n');
+// console.log(replacedStr);
+
+
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+)/gim;
+// let replacedStr = str.replace(regex, '!\n$1');
+// console.log(replacedStr);
+
+
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+\s*$)/gim;
+// let replacedStr = str.replace(regex, '$1!\n');
+// console.log(replacedStr);
+
+
+// let str = 
+//   abc
+//   def
+//   ghi
+//   jkl
+// ;
+// let regex = /(^\s*[a-z]+)/gim;
+// let replacedStr = str.replace(regex, '                    !$1');
+// console.log(replacedStr);
+
+
+
+115
+// let str = 'aeeea aeea aea axa axxa axxxa';
+// let regex = /a(e+|x+)a/g;
+// let matches = str.match(regex);
+// console.log(matches);
+
+
+// let str = 'aeeea aeea aea axa axxa axxxa';
+// let regex = /a(e{2}|x+)a/g;
+// let matches = str.match(regex);
+// console.log(matches);
+
+
+
+// 116
+// let str = 'a aa aaa aaaa aaaa';
+// let regex = /a+/;
+// let res = str.replace(regex, '!');
+// console.log(res);
+
+
+
+// 117
+// // №1
+// let str1 = 'http://example.com';
+// let regex1 = /^http:\/\//;
+// console.log(regex1.test(str1)); // true
+
+// // №2
+// let str2 = 'https://example.com';
+// let regex2 = /^(http|https):\/\//;
+// console.log(regex2.test(str2)); // true
+
+// // №3
+// let str3 = 'index.html';
+// let regex3 = /(txt|html|php)$/;
+// console.log(regex3.test(str3)); // true
+
+// // №4
+// let str4 = 'image.jpg';
+// let regex4 = /(jpg|jpeg)$/;
+// console.log(regex4.test(str4)); // true
+
+// // №5
+// let str5 = 'photo.png';
+// let regex5 = /(jpg|jpeg|png)$/;
+// console.log(regex5.test(str5)); // true
+
+// // №6
+// let str6 = '123456789012';
+// let regex6 = /^\d{1,12}$/;
+// console.log(regex6.test(str6)); // true
+
+// // №7
+// let str7 = '2021-12-31';
+// let regex7 = /^\d{4}-\d{2}-\d{2}$/;
+// console.log(regex7.test(str7)); // true
+
+// // №8
+// let str8 = '31.12.2021';
+// let regex8 = /^\d{2}.\d{2}.\d{4}$/;
+// console.log(regex8.test(str8)); // true
+
+// // №9
+// let str9 = '12:30:45';
+// let regex9 = /^\d{2}:\d{2}:\d{2}$/;
+// console.log(regex9.test(str9)); // true
+
+// // №10
+// let email = 'example@mail.com';
+// let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// console.log(emailRegex.test(email)); // true
+
+// // №11
+// let domain = 'example.com';
+// let domainRegex = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+// console.log(domainRegex.test(domain)); // true
+
+
+
+// 118
+// let str = '1 23 456 789';
+// let regex = /\b\d{3}\b/;
+// let match = str.search(regex);
+
+// console.log(match); // 6
+
+
+
+// 119
+// let str = '2025-12-31 12:59:59';
+// let parts = str.split(/[- :]/);
+
+// console.log(parts); // ['2025', '12', '31', '12', '59', '59']
+
+
+
+// 120
+// let str = 'aaa 123 bbb';
+// let regex = /\d+/;
+// let match = str.match(regex);
+
+// console.log(match); // ["123"]
+
+
+// let str = 'aaa 123 bbb';
+// let regex = /\d/;
+// let match = str.search(regex);
+
+// console.log(match); // 4
+
+
+
+// 121
+// let str = 'sss domain.ru zzz';
+// let regex = /(\w+)\.(\w+)/;
+// let match = str.match(regex);
+
+// console.log(match[1]); // domain
+// console.log(match[2]); // ru
+
+
+// let str = '31.12.2025';
+// let regex = /(\d{2})\.(\d{2})\.(\d{4})/;
+// let match = str.match(regex);
+
+// console.log(match[1]); // 31
+// console.log(match[2]); // 12
+// console.log(match[3]); // 2025
+
+
+
+// 122
+// let str = 'site.ru sss site.com zzz site.net';
+// let regex = /\b\w+\.\w+\b/g;
+// let domainsArray = str.match(regex);
+
+// console.log(domainsArray); // ["site.ru", "site.com", "site.net"]
+
+
+// let str = 'a1b c34d x567z';
+// let regex = /\d+/g;
+// let numbersArray = str.match(regex);
+// let sum = numbersArray.reduce((acc, curr) => acc + parseInt(curr), 0);
+
+// console.log(sum); // 602
+
+
+
+// 123
+// let str = '12:37 15:48 17:59';
+// let regex = /(\d+):(\d+)/g;
+// let matches = str.match(regex);
+
+// matches.forEach((match) => {
+//   let time = match.match(/(\d+):(\d+)/);
+//   console.log('Часы:', time[1], ', Минуты:', time[2]);
+// });
+
+
+// let str = 'site.ru sss site.com zzz site.net';
+// let regex = /\b(\w+)\.(\w+)\b/g;
+// let domainsArray = [];
+// let matches;
+
+// while(matches = regex.exec(str)) {
+//   let domain = {
+//     name: matches[1],
+//     zone: matches[2]
+//   };
+//   domainsArray.push(domain);
+// }
+
+// console.log(domainsArray);
+
+
+
+// 124
+// let str = '12:37:57 15:48:58 17:59:59';
+// let regex = /(\d+):(\d+):(\d+)/g;
+// let matches;
+
+// while ((matches = regex.exec(str)) !== null) {
+//   console.log("Часы:", matches[1], ", Минуты:", matches[2], ", Секунды:", matches[3]);
+// }
+
+
+
+// 125
+// let str = '12:37 15:48 17:59';
+// let regex = /(\d+:\d+)/g;
+// regex.lastIndex = 4; // устанавливаем lastIndex равным 4
+
+// let matches = regex.exec(str);
+// console.log(matches); // ["5:48"]
+
+
+
+// 126
+// let str = '12 34 56 78';
+// let regex = /\b(\d)(\d)\b/g;
+// let replacedStr = str.replace(regex, '$2$1');
+
+// console.log(replacedStr); // '21 43 65 87'
+
+
+// let str = '31.12.2025';
+// let regex = /(\d{2})\.(\d{2})\.(\d{4})/;
+// let newStr = str.replace(regex, '$3.$2.$1');
+
+// console.log(newStr); // '2025.12.31'
+
+
+
+// 127
+// let str = 'aaa [2] bbb [3] ccc [12] ddd';
+// let regex = /\[(\d+)\]/g;
+
+// let result = str.replace(regex, function(match, num) {
+//   let doubled = parseInt(num) * 2;
+//   return '[' + doubled + ']';
+// });
+
+// console.log(result);
+
+
+// let str = '123 456 789';
+// let regex = /\d+/g;
+
+// let result = str.replace(regex, function(match) {
+//   return match.split('').reverse().join('');
+// });
+
+// console.log(result); 
+
+
+// let str = '31.12.2025 30.11.2024 29.10.2023';
+// let regex = /(\d{2})\.(\d{2})\.(\d{4})/g;
+
+// let result = str.replace(regex, function(match, day, month, year) {
+//   return year + '-' + month + '-' + day;
+// });
+
+// console.log(result); 
+
+
+
+// 128
+// let str = 'a1b2c3';
+// let regex = /\d/g;
+// let result = str.replace(regex, function(match) {
+//   return match + match;
+// });
+// console.log(result); // 'a11b22c33'
+
+
+// let str = 'sss site.ru zzz site.com kkk';
+// let regex = /\b(\w+\.\w+)\b/g;
+// let result = str.replace(regex, '<a href="http://$1">$1</a>');
+// console.log(result); // 'sss <a href="http://site.ru">site.ru</a> zzz <a href="http://site.com">site.com</a> kkk'
+
+
+
+// 129
+// let str = 'aaa bbb ccc xyz';
+// let regex = /(.)\1{2,}/g;
+// let matches = str.match(regex);
+// console.log(matches); // ['aaa']
+
+
+// let str = 'a aa aaa aaaa aaaaa';
+// let regex = /(.)\1{1,}/g;
+// let matches = str.match(regex);
+// console.log(matches); // ['aa', 'aaa', 'aaaa', 'aaaaa']
+
+
+// let str = "aaa aaa bbb bbb ccc ddd";
+// let regex = /\b(\w+)\s\1\b/g;
+// let matches = str.match(regex);
+// console.log(matches); // ['aaa aaa', 'bbb bbb']
+
+
+
+// 130
+// let str = '12:59:59';
+// let regex = /(?<hours>\d{2}):(?<minutes>\d{2}):(?<seconds>\d{2})/;
+// let result = str.match(regex);
+
+// console.log(result.groups.hours); // 12
+// console.log(result.groups.minutes); // 59
+// console.log(result.groups.seconds); // 59
+
+
+
+// 131
+// let str = '12:59:59 12:59:12 09:45:09';
+// let regex = /(?<hours>\d{2}):\d{2}:\k<hours>\b/g;
+// let matches = str.match(regex);
+// console.log(matches); // ['12:59:59', '09:45:09']
+
+
+
+// 133
+// let str = 'func1() func2() func3()';
+// let regex = /(\w+)(?=\(\))/g;
+// let functions = str.match(regex);
+// console.log(functions); // ["func1", "func2", "func3"]
+
+
+// let str = '<a href="" class="eee" id="zzz">';
+// let regex = /(\w+)(?==)/g;
+// let attributes = str.match(regex);
+// console.log(attributes); // ["href", "class", "id"]
+
+
+// let str = '$aaa $bbb $ccc xxxx';
+// let regex = /(?<=\$)\w+/g;
+// let variables = str.match(regex);
+// console.log(variables); // ["aaa", "bbb", "ccc"]
+
+
+
+// 134
+// let zones = 'ru|by|ua';
+// let reg = new RegExp(`^[a-z]+\\.(${zones})$`);
+// let res = reg.test(str);
+
+
+// let arr = ['ru', 'by', 'ua'];
+// let zones = arr.join('|');
+// let reg = new RegExp(`^[a-z]+\\.(${zones})$`);
+// let res = reg.test(str);
+
+
+
+// 135
+// let str = '123 456 789';
+// let reg = new RegExp('[0-9]+', 'g');
+// let res = str.replace(reg, '!');
+// console.log(res); // '! ! !'
+
+
+
+// 136
+// let str = 'x1y x12y x123y';
+// let reg = new RegExp('x\\d+y'); 
+// let res = str.replace(reg, '!');
+
+
+// let str = 'x.y xay xby';
+// let reg = new RegExp('x\\.y'); 
+// let res = str.replace(reg, '!');
+
+
+// let str = 'x\\y';
+// let reg = new RegExp('x\\\\y'); 
+// let res = str.replace(reg, '!');
